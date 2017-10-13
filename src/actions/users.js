@@ -1330,7 +1330,6 @@ export default {
     loadProfilesForDirect,
     revokeSession,
     revokeAllSessionsForUser,
-    revokeAllSessionsForAllUsers,
     getUserAudits,
     searchProfiles,
     startPeriodicStatusUpdates,
