@@ -679,9 +679,9 @@ export function revokeAllSessionsForUser(userId) {
     return async (dispatch, getState) => {
         dispatch({type: UserTypes.REVOKE_ALL_USER_SESSIONS_REQUEST}, getState);
 
-        try{
+        try {
             await Client4.revokeAllSessionsForUser(userId);
-        }catch(error){
+        } catch (error) {
             forceLogoutIfNecessary(error, dispatch);
             dispatch(batchActions([
                 {type: UserTypes.REVOKE_ALL_USER_SESSIONS_FAILURE, error},
@@ -697,7 +697,7 @@ export function revokeAllSessionsForUser(userId) {
         ]), getState);
 
         return true;
-    }
+    };
 }
 
 export function loadProfilesForDirect() {
